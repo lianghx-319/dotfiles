@@ -5,7 +5,7 @@
 # Parameters: $1 (required) - The gem name.
 _check_gem_dependencies() {
   local gem="$1"
-  ag "(add.*dependency \"$gem\"|add.*dependency '$gem'|gem \"$gem\"|gem '$gem')" --depth 0 . > /dev/null
+  rg "(add.*dependency \"$gem\"|add.*dependency '$gem'|gem \"$gem\"|gem '$gem')" --max-depth 1 . > /dev/null
 }
 export -f _check_gem_dependencies
 
@@ -50,9 +50,11 @@ _scan_code() {
   local message="$2"
   local file_pattern=$3
   local search_pattern=$4
-  local ignore_pattern="vendor"
+  # local ignore_pattern='!vendor'
+  local ignore_pattern='vendor'
 
   if command -v ag > /dev/null; then
+    # results=("$(rg --iglob $ignore_pattern --glob $file_pattern --regexp '$search_pattern' . || :)")
     results=("$(ag --file-search-regex $file_pattern $search_pattern --ignore $ignore_pattern . || :)")
 
     if [[ ${#results[@]} -gt 0 && ${results[@]} != '' ]]; then

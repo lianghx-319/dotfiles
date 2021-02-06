@@ -26,7 +26,7 @@ shopt -s histappend
 # Enables history expansion with space (i.e. `!!<space>`).
 bind Space:magic-space
 
-# Default Editors
+# Editors
 export EDITOR=sublime
 export VISUAL=vim
 
@@ -70,12 +70,16 @@ if [[ -f /usr/local/etc/bash_completion ]]; then
   source "/usr/local/etc/bash_completion"
 fi
 
+# Docker
+export DOCKER_CONFIG=$HOME/.config/docker
+export DOCKER_CONTENT_TRUST=1
+export DOCKER_CONTENT_TRUST_SERVER=https://notaryserver:4443
+
 # OpenSSL
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # GPG
-GPG_TTY=$(tty)
-export GPG_TTY
+export GPG_TTY=$(tty)
 
 # direnv
 if [[ -e /usr/local/bin/direnv ]]; then

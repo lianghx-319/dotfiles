@@ -1,0 +1,58 @@
+# Edit fish config
+abbr -a change code ~/.config/fish
+abbr -a update source ~/.config/fish/config.fish
+
+# Section: General
+abbr -a c clear
+abbr h "history"
+abbr o "open"
+abbr -a cat "bat --theme DarkNeon"
+abbr -a ping "prettyping --nolegend"
+
+# Exa
+abbr x "exa --all --long --header --group-directories-first --time-style long-iso --git --git-ignore"
+abbr x1 "exa --oneline --all --group-directories-first"
+abbr xt "exa --tree"
+
+# NeoVim
+abbr -a vi nvim
+
+# Yarn
+abbr -a ya yarn add
+abbr -a yad yarn add -D
+abbr -a yag yarn global add
+abbr -a yrm yarn remove
+abbr -a yup yarn upgrade
+abbr -a yul yarn upgrade --latest
+
+# Git
+abbr -a gcl "git clone"
+abbr -a gb "git switch"
+abbr -a gbb "git switch -"
+abbr -a gbm "git switch master"
+abbr -a gco "git checkout"
+abbr -a gcp "git cherry-pick"
+abbr -a gcpa "git cherry-pick --abort"
+abbr -a gcps "git cherry-pick --skip"
+abbr -a gcm "git commit -m"
+abbr -a gcam "git commit -a -m"
+abbr -a gca "git commit --amend --no-edit"
+abbr -a gcae "git commit --amend"
+abbr -a gcaa "git add --all; git commit --amend --no-edit"
+abbr -a gcaae "git add --all; git commit --amend"
+abbr -a gap "git add -p"
+abbr -a gnope "git checkout ."
+abbr -a gwait "git reset HEAD"
+abbr -a gundo "git reset --soft HEAD^"
+abbr -a greset "git clean -f; git reset --hard HEAD" # Removes all changes, even untracked files
+abbr -a gl "git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short"
+abbr -a glb "git log --oneline --decorate --graph --all"
+abbr -a gst "git status -s --branch"
+abbr -a gpl "git pull --rebase"
+abbr -a gps "git push"
+abbr -a gpsf "git push --force-with-lease"
+abbr -a grp "git remote prune"
+abbr -a grb "git rebase"
+abbr -a grbi "git rebase -i"
+abbr -a grba "git rebase --abort"
+abbr -a grbc "git rebase --continue"

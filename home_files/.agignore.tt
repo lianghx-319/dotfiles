@@ -1,7 +1,0 @@
-/log/
-/logs/
-/tmp/
-/.git/
-
-*.tags
-*.tags*

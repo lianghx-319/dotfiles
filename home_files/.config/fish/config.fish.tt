@@ -10,9 +10,13 @@ starship init fish | source
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
 
 # Load nvm
+# set NVM_DIR for brew nvm
+# Open this after fisher setup
+set -q brew_nvm_prefix; or set -gx brew_nvm_prefix (brew --prefix nvm)
+set -q NVM_DIR; or set -gx NVM_DIR $brew_nvm_prefix
 load_nvm
 
-# set Proxy
-set proxy_host 127.0.0.1:7890
+# set Proxy and use Proxy defautl
+set proxy_host 127.0.0.1:7890 # host can change see https://github.com/oh-my-fish/plugin-proxy
 set proxy_auth false
 proxy

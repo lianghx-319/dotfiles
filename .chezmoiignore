@@ -1,1 +1,2 @@
-dot_config/clash/
+.config/clash/
+.DS_Store

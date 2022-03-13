@@ -10,7 +10,7 @@ function fish_prompt
                s|/|"(__batman_color_snd)"/"(__batman_color_off)"|g;  \
                s|"$base"|"(__batman_color_fst)$base(__batman_color_off)" |g"
 
-  echo -n (echo "$pwd" | sed -e $expr)(__batman_color_off)\n
+  echo -n (echo "$pwd" | sed -e $expr)(__batman_color_off)
 
   for color in $colors
     echo -n (set_color $color)">"

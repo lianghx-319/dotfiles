@@ -1,18 +1,38 @@
-function git::is_stashed
-  command git rev-parse --verify --quiet refs/stash >/dev/null
-end
+# Options
+set -g __fish_git_prompt_show_informative_status
+set -g __fish_git_prompt_showcolorhints
+set -g __fish_git_prompt_showdirtystate
+set -g __fish_git_prompt_showuntrackedfiles
+set -g __fish_git_prompt_showstashstate
+set -g __fish_git_prompt_showupstream "informative"
 
-function git::get_ahead_count
-  echo (command git log 2> /dev/null | grep '^commit' | wc -l | tr -d " ")
-end
+# Colors
+set -g __fish_git_prompt_color_branch $_batman_color_yellow --bold
+set -g __fish_git_prompt_color_dirtystate $_batman_color_red
+set -g __fish_git_prompt_color_invalidstate $_batman_color_red
+set -g __fish_git_prompt_color_merging $_batman_color_red
+set -g __fish_git_prompt_color_stagedstate $_batman_color_blue
+set -g __fish_git_prompt_color_upstream_ahead $_batman_color_blue
+set -g __fish_git_prompt_color_upstream_behind $_batman_color_blue
+set -g __fish_git_prompt_color_cleanstate $_batman_color_yellow
+set -g __fish_git_prompt_color_untrackedfiles $_batman_color_yellow
+set -g __fish_git_prompt_color_upstream $_batman_color_yellow
+set -g __fish_git_prompt_color_flags $_batman_color_yellow
+set -g __fish_git_prompt_color_branch_detached $_batman_color_red
 
-function git::branch_name
-  command git symbolic-ref --short HEAD
-end
 
-function git::is_touched
-  test -n (echo (command git status --porcelain))
-end
+# Icons
+set -g __fish_git_prompt_char_cleanstate '✔'
+set -g __fish_git_prompt_char_dirtystate '*'
+set -g __fish_git_prompt_char_invalidstate '#'
+set -g __fish_git_prompt_char_stagedstate '+'
+set -g __fish_git_prompt_char_stashstate '$'
+set -g __fish_git_prompt_char_stateseparator ' '
+set -g __fish_git_prompt_char_untrackedfiles '%'
+set -g __fish_git_prompt_char_upstream_ahead '>'
+set -g __fish_git_prompt_char_upstream_behind '<'
+set -g __fish_git_prompt_char_upstream_diverged '<>'
+set -g __fish_git_prompt_char_upstream_equal '=' 
 
 function fish_right_prompt
   set -l code $status
@@ -22,22 +42,6 @@ function fish_right_prompt
      printf (__batman_color_trd)":"(__batman_color_dim)"$HOSTNAME "(__batman_color_off)
    end
 
-  if git rev-parse 2> /dev/null
-    git::is_stashed; and echo (__batman_color_trd)"^"(__batman_color_off)
-    printf (__batman_color_snd)"("(begin
-      if git::is_touched
-        echo (__batman_color_trd)"*"(__batman_color_off)
-      else
-        echo ""
-      end
-    end)(__batman_color_fst)(git::branch_name)(__batman_color_snd)(begin
-      set -l count (git::get_ahead_count)
-        if test $count -eq 0
-          echo ""
-        else
-          echo (__batman_color_trd)"+"(__batman_color_fst)$count
-        end
-    end)(__batman_color_snd)") "(__batman_color_off)
-  end
-  printf (__batman_color_dim)(date +%H(__batman_color_fst):(__batman_color_dim)%M(__batman_color_fst):(__batman_color_dim)%S)(__batman_color_off)" "
+  printf '%s ' (__fish_git_prompt | string trim)
+  printf $_batman_cmd_duration
 end

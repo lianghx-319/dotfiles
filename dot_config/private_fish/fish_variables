@@ -46,8 +46,8 @@ SETUVAR _fish_abbr_ls:exa\x20\x2d\x2doneline\x20\x2d\x2dall\x20\x2d\x2dgroup\x2d
 SETUVAR _fish_abbr_o:open
 SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dtree
 SETUVAR _fish_abbr_vi:nvim
-SETUVAR _fisher_oh_2D_my_2D_fish_2F_theme_2D_batman_files:/Users/hanxx/\x2econfig/fish/functions/__batman_color_dim\x2efish\x1e/Users/hanxx/\x2econfig/fish/functions/__batman_color_fst\x2efish\x1e/Users/hanxx/\x2econfig/fish/functions/__batman_color_off\x2efish\x1e/Users/hanxx/\x2econfig/fish/functions/__batman_color_snd\x2efish\x1e/Users/hanxx/\x2econfig/fish/functions/__batman_color_trd\x2efish\x1e/Users/hanxx/\x2econfig/fish/functions/fish_greeting\x2efish\x1e/Users/hanxx/\x2econfig/fish/functions/fish_prompt\x2efish\x1e/Users/hanxx/\x2econfig/fish/functions/fish_right_prompt\x2efish\x1e/Users/hanxx/\x2econfig/fish/functions/fish_title\x2efish
-SETUVAR _fisher_plugins:oh\x2dmy\x2dfish/theme\x2dbatman
+SETUVAR _fisher_lianghx_2D_33_31_39_2F_theme_2D_batman_files:/Users/hanxx/\x2econfig/fish/functions/fish_greeting\x2efish\x1e/Users/hanxx/\x2econfig/fish/functions/fish_prompt\x2efish\x1e/Users/hanxx/\x2econfig/fish/functions/fish_right_prompt\x2efish\x1e/Users/hanxx/\x2econfig/fish/functions/fish_title\x2efish\x1e/Users/hanxx/\x2econfig/fish/conf\x2ed/batman\x2efish
+SETUVAR _fisher_plugins:lianghx\x2d319/theme\x2dbatman
 SETUVAR fish_color_autosuggestion:585858
 SETUVAR fish_color_cancel:normal
 SETUVAR fish_color_command:5f87ff

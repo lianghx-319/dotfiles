@@ -1,0 +1,104 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export ALL_PROXY:http\x3a//192\x2e168\x2e2\x2e4\x3a7890
+SETUVAR --export FTP_PROXY:http\x3a//192\x2e168\x2e2\x2e4\x3a7890
+SETUVAR --export HTTPS_PROXY:http\x3a//192\x2e168\x2e2\x2e4\x3a7890
+SETUVAR --export HTTP_PROXY:http\x3a//192\x2e168\x2e2\x2e4\x3a7890
+SETUVAR ZO_CMD:zo
+SETUVAR Z_CMD:z
+SETUVAR Z_DATA:/Users/hwangto/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/Users/hwangto/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e/Users/hwangto\x24
+SETUVAR __fish_initialized:3400
+SETUVAR _fish_abbr_c:clear
+SETUVAR _fish_abbr_cat:bat\x20\x2d\x2dtheme\x20DarkNeon
+SETUVAR _fish_abbr_change:lvim\x20\x7e/\x2econfig/fish
+SETUVAR _fish_abbr_gaa:git\x20add\x20\x2d\x2dall
+SETUVAR _fish_abbr_gap:git\x20add\x20\x2dp
+SETUVAR _fish_abbr_gb:git\x20switch
+SETUVAR _fish_abbr_gbb:git\x20switch\x20\x2d
+SETUVAR _fish_abbr_gbm:git\x20switch\x20main
+SETUVAR _fish_abbr_gca:git\x20commit\x20\x2d\x2damend\x20\x2d\x2dno\x2dedit
+SETUVAR _fish_abbr_gcaa:git\x20add\x20\x2d\x2dall\x3b\x20git\x20commit\x20\x2d\x2damend\x20\x2d\x2dno\x2dedit
+SETUVAR _fish_abbr_gcaae:git\x20add\x20\x2d\x2dall\x3b\x20git\x20commit\x20\x2d\x2damend
+SETUVAR _fish_abbr_gcae:git\x20commit\x20\x2d\x2damend
+SETUVAR _fish_abbr_gcam:git\x20commit\x20\x2da\x20\x2dm
+SETUVAR _fish_abbr_gcl:ghq\x20get
+SETUVAR _fish_abbr_gcm:git\x20commit\x20\x2dm
+SETUVAR _fish_abbr_gco:git\x20checkout
+SETUVAR _fish_abbr_gcp:git\x20cherry\x2dpick
+SETUVAR _fish_abbr_gcpa:git\x20cherry\x2dpick\x20\x2d\x2dabort
+SETUVAR _fish_abbr_gcps:git\x20cherry\x2dpick\x20\x2d\x2dskip
+SETUVAR _fish_abbr_gl:git\x20log\x20\x2d\x2dpretty\x3dformat\x3a\x27\x25C\x28yellow\x29\x25h\x20\x25Cred\x25ad\x20\x25Cblue\x25an\x25Cgreen\x25d\x20\x25Creset\x25s\x27\x20\x2d\x2ddate\x3dshort
+SETUVAR _fish_abbr_glb:git\x20log\x20\x2d\x2doneline\x20\x2d\x2ddecorate\x20\x2d\x2dgraph\x20\x2d\x2dall
+SETUVAR _fish_abbr_gnope:git\x20checkout\x20\x2e
+SETUVAR _fish_abbr_gpl:git\x20pull\x20\x2d\x2drebase
+SETUVAR _fish_abbr_gps:git\x20push
+SETUVAR _fish_abbr_gpsf:git\x20push\x20\x2d\x2dforce\x2dwith\x2dlease
+SETUVAR _fish_abbr_grb:git\x20rebase
+SETUVAR _fish_abbr_grba:git\x20rebase\x20\x2d\x2dabort
+SETUVAR _fish_abbr_grbc:git\x20rebase\x20\x2d\x2dcontinue
+SETUVAR _fish_abbr_grbi:git\x20rebase\x20\x2di
+SETUVAR _fish_abbr_greset:git\x20clean\x20\x2df\x3b\x20git\x20reset\x20\x2d\x2dhard\x20HEAD
+SETUVAR _fish_abbr_grp:git\x20remote\x20prune
+SETUVAR _fish_abbr_gst:git\x20status\x20\x2ds\x20\x2d\x2dbranch
+SETUVAR _fish_abbr_gundo:git\x20reset\x20\x2d\x2dsoft\x20HEAD\x5e
+SETUVAR _fish_abbr_gwait:git\x20reset\x20HEAD
+SETUVAR _fish_abbr_h:history
+SETUVAR _fish_abbr_l:exa\x20\x2d\x2dicons
+SETUVAR _fish_abbr_ll:exa\x20\x2d\x2dall\x20\x2d\x2dlong\x20\x2d\x2dheader\x20\x2d\x2dgroup\x2ddirectories\x2dfirst\x20\x2d\x2dtime\x2dstyle\x20long\x2diso\x20\x2d\x2dgit\x20\x2d\x2dgit\x2dignore
+SETUVAR _fish_abbr_ls:exa\x20\x2d\x2doneline\x20\x2d\x2dall\x20\x2d\x2dgroup\x2ddirectories\x2dfirst
+SETUVAR _fish_abbr_o:open
+SETUVAR _fish_abbr_tree:exa\x20\x2d\x2dtree
+SETUVAR _fish_abbr_update:source\x20\x7e/\x2econfig/fish/config\x2efish
+SETUVAR _fish_abbr_vi:lvim
+SETUVAR _fisher_catppuccin_2F_fish_files:\x7e/\x2econfig/fish/themes/Catppuccin\x20Frappe\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Latte\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Macchiato\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Mocha\x2etheme
+SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
+SETUVAR _fisher_jethrokuan_2F_z_files:\x7e/\x2econfig/fish/functions/__z\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_add\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_clean\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_complete\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/z\x2efish
+SETUVAR _fisher_oh_2D_my_2D_fish_2F_plugin_2D_proxy_files:\x7e/\x2econfig/fish/functions/__proxy\x2eset\x2efish\x1e\x7e/\x2econfig/fish/functions/noproxy\x2efish\x1e\x7e/\x2econfig/fish/functions/proxy\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/plugin\x2dproxy\x2efish
+SETUVAR _fisher_plugins:jethrokuan/z\x1eedc/bass\x1ecatppuccin/fish\x1eoh\x2dmy\x2dfish/plugin\x2dproxy
+SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR --export all_proxy:http\x3a//192\x2e168\x2e2\x2e4\x3a7890
+SETUVAR fish_color_autosuggestion:6c7086
+SETUVAR fish_color_cancel:f38ba8
+SETUVAR fish_color_command:89b4fa
+SETUVAR fish_color_comment:7f849c
+SETUVAR fish_color_cwd:f9e2af
+SETUVAR fish_color_cwd_root:red
+SETUVAR fish_color_end:fab387
+SETUVAR fish_color_error:f38ba8
+SETUVAR fish_color_escape:eba0ac
+SETUVAR fish_color_gray:6c7086
+SETUVAR fish_color_history_current:\x2d\x2dbold
+SETUVAR fish_color_host:89b4fa
+SETUVAR fish_color_host_remote:a6e3a1
+SETUVAR fish_color_keyword:f38ba8
+SETUVAR fish_color_normal:cdd6f4
+SETUVAR fish_color_operator:f5c2e7
+SETUVAR fish_color_option:\x1d
+SETUVAR fish_color_param:f2cdcd
+SETUVAR fish_color_quote:a6e3a1
+SETUVAR fish_color_redirection:f5c2e7
+SETUVAR fish_color_search_match:\x2d\x2dbackground\x3d313244
+SETUVAR fish_color_selection:\x2d\x2dbackground\x3d313244
+SETUVAR fish_color_status:f38ba8
+SETUVAR fish_color_user:94e2d5
+SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_pager_color_background:\x1d
+SETUVAR fish_pager_color_completion:cdd6f4
+SETUVAR fish_pager_color_description:6c7086
+SETUVAR fish_pager_color_prefix:f5c2e7
+SETUVAR fish_pager_color_progress:6c7086
+SETUVAR fish_pager_color_secondary_background:\x1d
+SETUVAR fish_pager_color_secondary_completion:\x1d
+SETUVAR fish_pager_color_secondary_description:\x1d
+SETUVAR fish_pager_color_secondary_prefix:\x1d
+SETUVAR fish_pager_color_selected_background:\x1d
+SETUVAR fish_pager_color_selected_completion:\x1d
+SETUVAR fish_pager_color_selected_description:\x1d
+SETUVAR fish_pager_color_selected_prefix:\x1d
+SETUVAR fish_user_paths:/opt/homebrew/bin
+SETUVAR --export ftp_proxy:http\x3a//192\x2e168\x2e2\x2e4\x3a7890
+SETUVAR --export http_proxy:http\x3a//192\x2e168\x2e2\x2e4\x3a7890
+SETUVAR --export https_proxy:http\x3a//192\x2e168\x2e2\x2e4\x3a7890

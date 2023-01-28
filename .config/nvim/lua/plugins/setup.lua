@@ -58,17 +58,15 @@ return require('packer').startup(function(use)
   use "saadparwaiz1/cmp_luasnip"
   use "rafamadriz/friendly-snippets"
   use "hrsh7th/cmp-path" -- 文件路径
-
   use "numToStr/Comment.nvim" -- gcc和gc注释
   use "windwp/nvim-autopairs" -- 自动补全括号
-
   use "akinsho/bufferline.nvim" -- buffer分割线
   use "lewis6991/gitsigns.nvim" -- 左则git提示
-
   use {
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'tpope/vim-surround'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

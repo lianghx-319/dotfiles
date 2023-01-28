@@ -184,8 +184,13 @@ _G.packer_plugins = {
     path = "/Users/hwangto/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/hwangto/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
+  },
   ["zellij.nvim"] = {
-    config = { "\27LJ\2\nå\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4'replaceVimWindowNavigationKeybinds\1\ndebug\1\29vimTmuxNavigatorKeybinds\2\tpath\vzellij\nsetup\vzellij\frequire\0" },
+    config = { "\27LJ\2\nå\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\29vimTmuxNavigatorKeybinds\2'replaceVimWindowNavigationKeybinds\1\tpath\vzellij\ndebug\1\nsetup\vzellij\frequire\0" },
     loaded = true,
     path = "/Users/hwangto/.local/share/nvim/site/pack/packer/start/zellij.nvim",
     url = "https://github.com/Lilja/zellij.nvim"
@@ -195,7 +200,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: zellij.nvim
 time([[Config for zellij.nvim]], true)
-try_loadstring("\27LJ\2\nå\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4'replaceVimWindowNavigationKeybinds\1\ndebug\1\29vimTmuxNavigatorKeybinds\2\tpath\vzellij\nsetup\vzellij\frequire\0", "config", "zellij.nvim")
+try_loadstring("\27LJ\2\nå\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\29vimTmuxNavigatorKeybinds\2'replaceVimWindowNavigationKeybinds\1\tpath\vzellij\ndebug\1\nsetup\vzellij\frequire\0", "config", "zellij.nvim")
 time([[Config for zellij.nvim]], false)
 
 _G._packer.inside_compile = false

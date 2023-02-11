@@ -2,7 +2,7 @@
 abbr -a c clear
 abbr h "history"
 abbr o "open"
-abbr -a cat "bat --theme DarkNeon"
+abbr -a cat "bat"
 abbr -a change "nvim ~/.config/fish/config.fish"
 abbr -a update "source ~/.config/fish/config.fish"
 

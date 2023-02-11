@@ -5,6 +5,7 @@ end
 # proxy
 set proxy_host 192.168.2.4:7890
 set proxy_auth false
+set BAT_THEME "Catppuccin-macchiato"
 
 # starship
 starship init fish | source

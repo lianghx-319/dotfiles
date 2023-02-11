@@ -9,8 +9,8 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
-#  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+  #  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
 #  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
 #  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
 
@@ -122,7 +122,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: 'Hack Nerd Font Mono'
+    family: 'Hack Nerd Font'
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -133,7 +133,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: 'Hack Nerd Font Mono'
+    family: 'Hack Nerd Font'
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -144,7 +144,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: 'Hack Nerd Font Mono'
+    family: 'Hack Nerd Font'
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -155,7 +155,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: 'Hack Nerd Font Mono'
+    family: 'Hack Nerd Font'
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic

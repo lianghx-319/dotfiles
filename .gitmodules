@@ -1,15 +1,9 @@
-; [submodule ".config/.config/alacritty/catppuccin"]
-; 	path = .config/.config/alacritty/catppuccin
-; 	url = https://github.com/catppuccin/alacritty.git
-; [submodule ".config/bat/themes"]
-; 	path = .config/bat/themes
-; 	url = https://github.com/catppuccin/bat.git
-; [submodule ".config/tmux/plugins/tpm"]
-; 	path = .config/tmux/plugins/tpm
-; 	url = https://github.com/tmux-plugins/tpm.git
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
 [submodule "bat/thmems"]
 	path = bat/thmems
 	url = https://github.com/catppuccin/bat.git
+[submodule "alacritty/catppuccin"]
+	path = alacritty/catppuccin
+	url = https://github.com/catppuccin/alacritty.git

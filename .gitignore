@@ -1,5 +1,5 @@
 .DS_Store
 
-.config/tmux/plugins/*
-!.config/tmux/plugins/tpm/
-.config/nvim/plugin/packer_compiled.lua
+tmux/plugins/*
+!tmux/plugins/tpm/
+nvim/plugin/packer_compiled.lua

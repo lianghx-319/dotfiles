@@ -2,3 +2,4 @@
 
 .config/tmux/plugins/*
 !.config/tmux/plugins/tpm/
+.config/nvim/plugin/packer_compiled.lua

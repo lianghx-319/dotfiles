@@ -33,18 +33,7 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
   }
-  use {
-    'Lilja/zellij.nvim',
-    config = function()
-      require('zellij').setup({
-        -- keys with designated default values.
-        path = "zellij", -- Zellij binary path
-        replaceVimWindowNavigationKeybinds = false, -- Will set keybinds like <C-w>h to left
-        vimTmuxNavigatorKeybinds = true, -- Will set keybinds like <C-h> to left
-        debug = false, -- Will log things to /tmp/zellij.nvim
-      })
-    end
-  }
+  use 'christoomey/vim-tmux-navigator'
   use 'nvim-treesitter/nvim-treesitter'
   use 'p00f/nvim-ts-rainbow'
   use {

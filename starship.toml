@@ -47,15 +47,55 @@ show_always = true
 style_user = "bg:#c6a0f6 fg:#494d64"
 style_root = "bg:#c6a0f6 fg:#494d64"
 format = '[$user ]($style)'
-disabled = false
+disabled = true
 
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
 [os]
 style = "bg:#c6a0f6 fg:#494d64"
-disabled = true # Disabled by default
+disabled = false # Disabled by default
+
+# This is the default symbols table.
+[os.symbols]
+Alpine = "🏔️ "
+Amazon = "🙂 "
+Android = "🤖 "
+Arch = "🎗️ "
+CentOS = "💠 "
+Debian = "🌀 "
+DragonFly = "🐉 "
+Emscripten = "🔗 "
+EndeavourOS = "🚀 "
+Fedora = "🎩 "
+FreeBSD = "😈 "
+Garuda = "🦅 "
+Gentoo = "🗜️ "
+HardenedBSD = "🛡️ "
+Illumos = "🐦 "
+Linux = "🐧 "
+Macos = " "
+Manjaro = "🥭 "
+Mariner = "🌊 "
+MidnightBSD = "🌘 "
+Mint = "🌿 "
+NetBSD = "🚩 "
+NixOS = "❄️ "
+OpenBSD = "🐡 "
+openSUSE = "🦎 "
+OracleLinux = "🦴 "
+Pop = "🍭 "
+Raspbian = "🍓 "
+Redhat = "🎩 "
+RedHatEnterprise = "🎩 "
+Redox = "🧪 "
+Solus = "⛵ "
+SUSE = "🦎 "
+Ubuntu = "🎯 "
+Unknown = "❓ "
+Windows = "🪟 "
 
 [directory]
+home_symbol = " "
 style = "bold bg:#ed8796 fg:#494d64"
 format = "[ $path ]($style)"
 truncation_length = 3

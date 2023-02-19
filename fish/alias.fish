@@ -14,6 +14,9 @@ abbr -a tree "exa --tree"
 
 abbr -a vi nvim
 
+# Lazygit
+abbr -a lg "lazygit"
+
 # Git
 abbr -a gaa "git add --all"
 abbr -a gcl "ghq get"

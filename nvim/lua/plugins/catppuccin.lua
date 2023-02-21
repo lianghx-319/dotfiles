@@ -4,14 +4,15 @@ return {
     "catppuccin/nvim",
     lazy = false,
     name = "catppuccin",
+    priority = 1000,
     config = function()
       require("catppuccin").setup({
         flavour = "macchiato", -- latte, frappe, macchiato, mocha
-        background = { -- :h background
-          light = "latte",
-          dark = "macchiato",
-        },
-        transparent_background = false,
+        -- background = { -- :h background
+        --   light = "latte",
+        --   dark = "macchiato",
+        -- },
+        transparent_background = true,
         show_end_of_buffer = false, -- show the '~' characters after the end of buffers
         term_colors = false,
         dim_inactive = {
@@ -35,7 +36,6 @@ return {
           types = {},
           operators = {},
         },
-        color_overrides = {},
         custom_highlights = {},
         integrations = {
           cmp = true,
@@ -72,6 +72,5 @@ return {
     opts = {
       colorscheme = "catppuccin",
     },
-    dependencies = { "catppuccin/nvim" },
   },
 }

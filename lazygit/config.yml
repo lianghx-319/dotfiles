@@ -21,4 +21,6 @@ gui:
 git:
   paging:
     colorArg: always
-    pager: delta --dark --paging=never --24-bit-color=never
+    # pager: diff-so-fancy
+    pager: delta --dark --paging=never 
+    # --24-bit-color=never --true-color=never

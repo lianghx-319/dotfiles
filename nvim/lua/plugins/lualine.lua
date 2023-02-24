@@ -20,8 +20,17 @@ return {
       },
       sections = {
         lualine_a = { { "mode", icon = "" } },
-        lualine_b = { { "branch", icon = "" } },
-        lualine_c = {
+        lualine_b = {
+          { "branch", icon = "", separator = "" },
+          {
+            "diff",
+            separator = "",
+            symbols = {
+              added = icons.git.added,
+              modified = icons.git.modified,
+              removed = icons.git.removed,
+            },
+          },
           {
             "diagnostics",
             symbols = {
@@ -31,8 +40,10 @@ return {
               hint = icons.diagnostics.Hint,
             },
           },
+        },
+        lualine_c = {
           { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-          { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
+          { "filename", path = 1 },
           -- stylua: ignore
           -- {
           --   function() return require("nvim-navic").get_location() end,
@@ -53,14 +64,6 @@ return {
             color = fg("Constant") ,
           },
           { require("lazy.status").updates, cond = require("lazy.status").has_updates, color = fg("Special") },
-          {
-            "diff",
-            symbols = {
-              added = icons.git.added,
-              modified = icons.git.modified,
-              removed = icons.git.removed,
-            },
-          },
         },
         lualine_y = {
           { "progress", separator = "", padding = { left = 1, right = 0 } },

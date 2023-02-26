@@ -8,7 +8,7 @@ set proxy_auth false
 set BAT_THEME "Catppuccin-macchiato"
 
 # starship
-starship init fish | source
+# starship init fish | source
 
 # import all alias
 source ~/.config/fish/alias.fish
@@ -23,3 +23,8 @@ set -px --path PATH "$HOME/.local/bin"
 set -px --path PATH "/usr/local/bin"
 op completion fish | source
 
+
+# pnpm
+set -gx PNPM_HOME "$HOME/Library/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end

@@ -3,3 +3,4 @@
 -- Add any additional options here
 vim.o.pumblend = 0
 vim.o.winblend = 0
+vim.o.guicursor = "n-v-c-sm:block,i-ci-ve:ver25-Cursor,r-cr-o:hor20"

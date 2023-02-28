@@ -7,28 +7,12 @@ return {
   },
   opts = {
     options = {
-      indicator = {
-        style = "underline",
-      },
-      separator_style = "padded_slant",
-      diagnostics = "nvim_lsp",
+      -- mode = "tabs",
+      separator_style = "slant",
       always_show_bufferline = false,
-      diagnostics_indicator = function(_, _, diag)
-        local icons = require("lazyvim.config").icons.diagnostics
-        local ret = (diag.error and icons.Error .. diag.error .. " " or "")
-          .. (diag.warning and icons.Warn .. diag.warning or "")
-        return vim.trim(ret)
-      end,
-      offsets = {
-        {
-          filetype = "neo-tree",
-          text = "File Explorer",
-          highlight = "Directory",
-          text_align = "center",
-        },
-      },
-      highlights = require("catppuccin.groups.integrations.bufferline").get(),
+      show_buffer_close_icons = false,
+      show_close_icon = false,
+      color_icons = true,
     },
   },
-  dependencies = { "catppuccin/nvim" },
 }

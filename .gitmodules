@@ -10,3 +10,6 @@
 [submodule "lazygit/catppuccin"]
 	path = lazygit/catppuccin
 	url = https://github.com/catppuccin/lazygit.git
+[submodule "alacritty/dracula"]
+	path = alacritty/dracula
+	url = https://github.com/dracula/alacritty.git

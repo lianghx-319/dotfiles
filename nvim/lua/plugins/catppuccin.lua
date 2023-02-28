@@ -1,3 +1,6 @@
+-- since this is just an example spec, don't actually load anything here and return an empty spec
+-- stylua: ignore
+if true then return {} end
 return {
   -- add catppuccin
   {
@@ -12,7 +15,7 @@ return {
           light = "latte",
           dark = "macchiato",
         },
-        transparent_background = false,
+        transparent_background = true,
         show_end_of_buffer = false, -- show the '~' characters after the end of buffers
         term_colors = false,
         dim_inactive = {
@@ -64,13 +67,5 @@ return {
         },
       })
     end,
-  },
-
-  -- Configure LazyVim to load gruvbox
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin",
-    },
   },
 }

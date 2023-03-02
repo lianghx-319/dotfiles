@@ -15,12 +15,10 @@ return {
           end,
         }),
         nls.builtins.code_actions.cspell,
-        nls.builtins.code_actions.eslint_d.with({
-          only_local = "node_modules/.bin",
-        }),
-        nls.builtins.diagnostics.eslint_d.with({
-          only_local = "node_modules/.bin",
-        }),
+        nls.builtins.formatting.eslint_d,
+        nls.builtins.diagnostics.eslint_d,
+        nls.builtins.code_actions.eslint_d,
+        nls.builtins.diagnostics.fish,
       },
     }
   end,

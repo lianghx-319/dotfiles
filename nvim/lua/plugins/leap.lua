@@ -1,7 +1,5 @@
 return {
   "ggandor/leap.nvim",
-  -- leap remove a function that broke flit
-  commit = "a706fea726179be91af75f4030a7b65a6adafa90",
   keys = {
     { "s", mode = { "n", "x", "o" }, desc = "Leap forward to" },
     { "S", mode = { "n", "x", "o" }, desc = "Leap backward to" },

@@ -1,13 +1,10 @@
--- since this is just an example spec, don't actually load anything here and return an empty spec
--- stylua: ignore
-if true then return {} end
 return {
   -- add catppuccin
   {
     "catppuccin/nvim",
-    lazy = false,
+    lazy = true,
     name = "catppuccin",
-    priority = 1000,
+    -- priority = 1000,
     config = function()
       require("catppuccin").setup({
         flavour = "macchiato", -- latte, frappe, macchiato, mocha

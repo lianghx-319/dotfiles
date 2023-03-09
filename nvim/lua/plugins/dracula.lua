@@ -1,8 +1,8 @@
 return {
   "Mofiqul/dracula.nvim",
-  lazy = false,
+  lazy = "true",
   name = "dracula",
-  priority = 1000,
+  -- priority = 1000,
   opts = {
     transparent_bg = true,
   },

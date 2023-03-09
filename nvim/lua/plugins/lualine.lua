@@ -14,7 +14,7 @@ return {
 
     return {
       options = {
-        theme = "dracula-nvim",
+        theme = "everforest",
         globalstatus = true,
         disabled_filetypes = { statusline = { "dashboard", "lazy", "alpha" } },
       },

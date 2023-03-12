@@ -19,6 +19,7 @@ return {
         nls.builtins.diagnostics.eslint_d,
         nls.builtins.code_actions.eslint_d,
         nls.builtins.diagnostics.fish,
+        nls.builtins.formatting.rustfmt,
       },
     }
   end,

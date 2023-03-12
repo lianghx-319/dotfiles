@@ -49,7 +49,7 @@ shift + alt - n : yabai -m window --space next;
 
 # move window to space
 shift + alt - 1 : yabai -m window --space 1;
-shift + alt - 2 : yabai -m winow --space 2;
+shift + alt - 2 : yabai -m window --space 2;
 shift + alt - 3 : yabai -m window --space 3;
 shift + alt - 4 : yabai -m window --space 4;
 shift + alt - 5 : yabai -m window --space 5;

@@ -17,7 +17,7 @@ yabai -m config mouse_modifier alt
 yabai -m config mouse_action1 move
 # right click + drag
 yabai -m config mouse_action2 resize
-yabai -m mouse_drop_sction swap
+yabai -m mouse_drop_action swap
 
 # disabled specific apps
 yabai -m rule --add app="^System Settings$" manage=off

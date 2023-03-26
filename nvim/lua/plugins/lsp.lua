@@ -10,6 +10,11 @@ return {
                 globals = { "vim" },
               },
             },
+            ["rush-analyzer"] = {
+              checkOnSave = {
+                command = "clippy",
+              },
+            },
           },
         },
       },

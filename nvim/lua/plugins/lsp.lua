@@ -23,6 +23,9 @@ return {
   {
     "glepnir/lspsaga.nvim",
     event = "BufRead",
+    keys = {
+      { "gh", "<cmd>Lspsaga lsp_finder<CR>", desc = "Lspsaga Finder" },
+    },
     config = function()
       require("lspsaga").setup({})
     end,

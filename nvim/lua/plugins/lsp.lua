@@ -14,6 +14,11 @@ return {
               checkOnSave = {
                 command = "clippy",
               },
+              procMacro = {
+                ignored = {
+                  ["napi-derive"] = { "napi" },
+                },
+              },
             },
           },
         },

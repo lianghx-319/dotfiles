@@ -2,6 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+starship init fish | source
+
 # proxy
 set proxy_host 192.168.2.4:7890
 set proxy_auth false

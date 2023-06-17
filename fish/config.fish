@@ -10,12 +10,15 @@ set -px --path PATH "$HOME/.cargo/bin"
 # starship
 starship init fish | source
 
-# proxy
-set proxy_host 192.168.2.4:7890
-set proxy_auth false
+# alias
+if test -f ./alias.fish
+  source ./alias.fish
+end
 
-# import all alias
-source ~/.config/fish/alias.fish
+# proxy
+if test -f ./plugins/proxy.fish
+  source ./plugins/proxy.fish
+end
 
 # 1password
 op completion fish | source

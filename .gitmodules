@@ -18,4 +18,4 @@
 	url = https://github.com/lianghx-319/catppuccin-warp.git
 [submodule "nvim"]
 	path = nvim
-	url = https://github.com/NvChad/NvChad
+	url = https://github.com/lianghx-319/NvChad.git

@@ -16,3 +16,6 @@
 [submodule "warp/themes"]
 	path = warp/themes
 	url = https://github.com/lianghx-319/catppuccin-warp.git
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/NvChad/NvChad

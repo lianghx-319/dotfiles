@@ -13,3 +13,6 @@
 [submodule "bat/themes"]
 	path = bat/themes
 	url = https://github.com/catppuccin/bat.git
+[submodule "warp/themes"]
+	path = warp/themes
+	url = https://github.com/lianghx-319/catppuccin-warp.git

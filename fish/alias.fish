@@ -22,7 +22,7 @@ abbr -a gaa "git add --all"
 abbr -a gcl "ghq get"
 abbr -a gb "git switch"
 abbr -a gbb "git switch -"
-abbr -a gbm "git switch main"
+abbr gbm 'git switch (git_main_branch)'
 abbr -a gco "git checkout"
 abbr -a gcp "git cherry-pick"
 abbr -a gcpa "git cherry-pick --abort"

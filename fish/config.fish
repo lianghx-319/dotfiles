@@ -11,19 +11,17 @@ set -px --path PATH "$HOME/.cargo/bin"
 starship init fish | source
 
 # alias
-if test -f ./alias.fish
-  source ./alias.fish
+if test -f ~/.config/fish/alias.fish
+  echo 'Alias loaded'
+  source ~/.config/fish/alias.fish
 end
 
 # proxy
-if test -f ./plugins/proxy.fish
-  source ./plugins/proxy.fish
+if test -f ~/.config/fish/plugins/proxy.fish
+  echo 'Proxy loaded'
+  source ~/.config/fish/plugins/proxy.fish
 end
 
 # 1password
 op completion fish | source
 
-# pnpm
-set -gx PNPM_HOME "$HOME/Library/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
-# pnpm end

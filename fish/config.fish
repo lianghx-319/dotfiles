@@ -12,13 +12,11 @@ starship init fish | source
 
 # alias
 if test -f ~/.config/fish/alias.fish
-  echo 'Alias loaded'
   source ~/.config/fish/alias.fish
 end
 
 # proxy
 if test -f ~/.config/fish/plugins/proxy.fish
-  echo 'Proxy loaded'
   source ~/.config/fish/plugins/proxy.fish
 end
 

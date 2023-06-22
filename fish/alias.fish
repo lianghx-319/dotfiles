@@ -1,3 +1,8 @@
+# Alias with token
+function git
+  set -l GITHUB_TOKEN (pass show github/personal/token)
+  command git $argv
+end
 # Section: General
 abbr -a c clear
 abbr h "history"

@@ -1,1 +1,19 @@
-{"flagWords":[],"words":["bufferline","nvim","builtins","everforest","lazyvim"],"version":"0.2","language":"en"}
+{
+  "words": [
+    "bufferline",
+    "nvim",
+    "builtins",
+    "everforest",
+    "lazyvim",
+    "webdev",
+    "chadrc",
+    "stylua",
+    "deno",
+    "postprocess",
+    "lspsaga",
+    "fixjson"
+  ],
+  "version": "0.2",
+  "language": "en",
+  "flagWords": []
+}

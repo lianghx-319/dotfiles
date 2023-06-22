@@ -19,9 +19,9 @@ $character"""
 
 [character]
 # Note the use of Catppuccin color 'maroon'
-success_symbol = "[[♥](green) ❯](maroon)"
-error_symbol = "[❯](red)"
-vicmd_symbol = "[❮](green)"
+success_symbol = "[[](green)  ](maroon)"
+error_symbol = "[](bold red)"
+vicmd_symbol = "[](bold green)"
 
 [directory]
 # Catppuccin 'lavender'

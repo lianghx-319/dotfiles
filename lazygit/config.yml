@@ -2,22 +2,22 @@ gui:
   theme:
     lightTheme: false 
     activeBorderColor:
-      - "#a6da95" # Green
+      - "#A7C080" # Green
       - bold
     inactiveBorderColor:
-      - "#cad3f5" # Text
+      - "#859289" # Text
     optionsTextColor:
-      - "#8aadf4" # Blue
+      - "#7FBBB3" # Blue
     selectedLineBgColor:
-      - "#363a4f" # Surface0
+      - "#343F44" # Surface0
     selectedRangeBgColor:
-      - "#363a4f" # Surface0
+      - "#343F44" # Surface0
     cherryPickedCommitBgColor:
       - "#8bd5ca" # Teal
     cherryPickedCommitFgColor:
-      - "#8aadf4" # Blue
+      - "#7FBBB3" # Blue
     unstagedChangesColor:
-      - red       # Red
+      - "#E67E80"       # Red
 git:
   paging:
     colorArg: always

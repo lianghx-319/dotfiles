@@ -1,0 +1,30 @@
+# name: 'Everforest'
+# url: 'https://github.com/catppuccin/fish'
+# preferred_background: 2D353B
+
+fish_color_normal 9DA9A0
+fish_color_command 7FBBB3
+fish_color_param D3C6AA
+fish_color_keyword E67E80
+fish_color_quote A7C080
+fish_color_redirection D699B6
+fish_color_end E69875
+fish_color_comment 859289
+fish_color_error E67E80
+fish_color_gray 7A8478
+fish_color_selection --background=A7C080
+fish_color_search_match --background=A7C080
+fish_color_option A7C080
+fish_color_operator E69875
+fish_color_escape D699B6
+fish_color_autosuggestion 7A8478
+fish_color_cancel E67E80
+fish_color_cwd DBBC7F
+fish_color_user 83C092
+fish_color_host 7FBBB3
+fish_color_host_remote 83C092
+fish_color_status E67E80
+fish_pager_color_progress 859289
+fish_pager_color_prefix D699B6
+fish_pager_color_completion 9DA9A0
+fish_pager_color_description 859289

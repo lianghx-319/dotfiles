@@ -8,7 +8,9 @@ set -px --path PATH "/usr/local/bin"
 set -px --path PATH "$HOME/.cargo/bin"
 
 # starship
-starship init fish | source
+if command -q starship
+  starship init fish | source
+end
 
 # alias
 if test -f ~/.config/fish/alias.fish
@@ -21,5 +23,7 @@ if test -f ~/.config/fish/plugins/proxy.fish
 end
 
 # 1password
-op completion fish | source
+if command -q op
+  op completion fish | source
+end
 

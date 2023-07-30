@@ -7,6 +7,8 @@ set -px --path PATH "/opt/homebrew/bin"
 set -px --path PATH "/usr/local/bin"
 set -px --path PATH "$HOME/.cargo/bin"
 
+fnm --version-file-strategy recursive env --shell fish --use-on-cd | source
+
 # starship
 if command -q starship
   starship init fish | source
@@ -27,3 +29,10 @@ if command -q op
   op completion fish | source
 end
 
+
+# pnpm
+set -gx PNPM_HOME "$HOME/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

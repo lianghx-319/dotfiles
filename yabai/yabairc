@@ -11,7 +11,7 @@ yabai -m config right_padding 12
 yabai -m config window_gap 12
 
 # mouse settings
-yabai -m config mouse_follows_focus on
+yabai -m config mouse_follows_focus off
 yabai -m config mouse_modifier alt
 # left click + drag
 yabai -m config mouse_action1 move
@@ -23,4 +23,4 @@ yabai -m mouse_drop_action swap
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
-yabai -m rule --add app="Xnip" manage=off mouse_follows_focus=off
+yabai -m rule --add app="^Xnip" manage=off mouse_follows_focus=off

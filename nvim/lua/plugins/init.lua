@@ -27,6 +27,11 @@ return {
 
   {
     "nvim-tree/nvim-tree.lua",
-    opts = require "configs.nvimtree"
+    opts = require "configs.nvimtree",
+  },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = require "configs.gitsigns",
   },
 }

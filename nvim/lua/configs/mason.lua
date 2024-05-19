@@ -21,6 +21,7 @@ local options = {
 
     -- rust stuff
     "rust-analyzer",
+    "taplo",
   },
 }
 

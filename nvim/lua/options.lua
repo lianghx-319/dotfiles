@@ -1,6 +1,7 @@
 require "nvchad.options"
 
--- add yours here!
-
--- local o = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
+vim.opt.relativenumber = true
+vim.opt.textwidth = 120
+vim.opt.colorcolumn = "+1"
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"

@@ -34,4 +34,20 @@ return {
     "lewis6991/gitsigns.nvim",
     opts = require "configs.gitsigns",
   },
+
+  {
+    "christoomey/vim-tmux-navigator",
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+    },
+    keys = {
+      { "<C-h>", mode = "n" },
+      { "<C-j>", mode = "n" },
+      { "<C-k>", mode = "n" },
+      { "<C-l>", mode = "n" },
+    },
+  },
 }

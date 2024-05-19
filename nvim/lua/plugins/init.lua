@@ -1,10 +1,21 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre",
     config = function()
       require "configs.conform"
     end,
+  },
+
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
+        "html-lsp",
+        "stylua",
+      },
+    },
   },
 
   -- These are some examples, uncomment them if you want to see them work!

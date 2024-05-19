@@ -6,3 +6,4 @@ nvim/plugin/packer_compiled.lua
 lazygit/state.yml
 fish/fish_variables
 fish/plugins/proxy.fish
+nvim/lazy-lock.json

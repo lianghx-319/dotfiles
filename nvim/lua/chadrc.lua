@@ -7,6 +7,11 @@ local M = {}
 M.ui = {
   theme = "everforest",
   transparency = true,
+  statusline = {
+    theme = "vscode_colored",
+    separator_style = "arrow",
+    overriden_modules = nil,
+  },
   nvdash = {
     load_on_startup = true,
 

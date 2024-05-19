@@ -46,10 +46,10 @@ return {
       "TmuxNavigateRight",
     },
     keys = {
-      { "<C-h>", mode = "n" },
-      { "<C-j>", mode = "n" },
-      { "<C-k>", mode = "n" },
-      { "<C-l>", mode = "n" },
+      { "<C-h>", "<cmd>TmuxNavigateLeft<cr>" },
+      { "<C-j>", "<cmd>TmuxNavigateDown<cr>" },
+      { "<C-k>", "<cmd>TmuxNavigateUp<cr>" },
+      { "<C-l>", "<cmd>TmuxNavigateRight<cr>" },
     },
   },
 
@@ -77,6 +77,15 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter", -- optional
       "nvim-tree/nvim-web-devicons", -- optional
+    },
+  },
+
+  {
+    "kdheepak/lazygit.nvim",
+    keys = { { "<leader>gg", "<cmd>LazyGit<cr>", desc = "Open LazyGit" } },
+    cmd = { "LazyGit" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
     },
   },
 }

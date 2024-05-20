@@ -14,6 +14,7 @@ local options = {
     "typescript-language-server",
     "prettier",
     "eslint_d",
+    "eslint-lsp",
 
     -- c/cpp stuff
     "clangd",

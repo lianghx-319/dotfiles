@@ -43,7 +43,7 @@ local function custom_on_attach(client, buffer)
 end
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "tsserver", "clangd", "tailwindcss", "jsonls", "taplo", "lua_ls" }
+local servers = { "html", "cssls", "tsserver", "clangd", "tailwindcss", "jsonls", "taplo" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -77,5 +77,14 @@ lspconfig.lua_ls.setup {
         preloadFileSize = 10000,
       },
     },
+  },
+}
+
+lspconfig.eslint.setup {
+  on_attach = custom_on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+  settings = {
+    workingDirectories = { mode = "auto" },
   },
 }

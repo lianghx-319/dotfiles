@@ -79,12 +79,3 @@ lspconfig.lua_ls.setup {
     },
   },
 }
-
-lspconfig.eslint.setup {
-  on_attach = custom_on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
-  settings = {
-    workingDirectories = { mode = "auto" },
-  },
-}

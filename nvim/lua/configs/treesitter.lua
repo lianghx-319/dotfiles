@@ -8,6 +8,7 @@ local options = {
     "typescript",
     "tsx",
     "rust",
+    "json",
   },
   autotag = {
     enable = true,

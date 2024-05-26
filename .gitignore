@@ -7,3 +7,7 @@ lazygit/state.yml
 fish/fish_variables
 fish/plugins/proxy.fish
 nvim/lazy-lock.json
+
+# fisher plugins
+**/*/fisher.fish
+

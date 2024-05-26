@@ -43,7 +43,7 @@ local function custom_on_attach(client, buffer)
 end
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "tsserver", "clangd", "tailwindcss", "jsonls", "taplo" }
+local servers = { "html", "cssls", "tsserver", "clangd", "tailwindcss", "jsonls", "taplo", "bashls" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do

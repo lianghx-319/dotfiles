@@ -23,6 +23,7 @@ local options = {
     -- rust stuff
     "rust-analyzer",
     "taplo",
+     "bash-language-server",
   },
 }
 

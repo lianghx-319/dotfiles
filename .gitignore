@@ -9,5 +9,8 @@ fish/plugins/proxy.fish
 nvim/lazy-lock.json
 
 # fisher plugins
-**/*/fisher.fish
+fisher.fish
+z.fish
+__z.fish
+__z*.fish
 

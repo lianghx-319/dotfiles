@@ -6,11 +6,11 @@ abbr -a cat "bat"
 abbr -a change "nvim ~/.config/fish/config.fish"
 abbr -a update "source ~/.config/fish/config.fish"
 
-# Exa
-abbr -a l "exa --icons"
-abbr -a ll "exa --all --long --header --group-directories-first --time-style long-iso --git --git-ignore"
-abbr -a ls "exa --oneline --all --group-directories-first"
-abbr -a tree "exa --tree"
+# Eza
+abbr -a l "eza --icons"
+abbr -a ll "eza --all --long --header --group-directories-first --time-style long-iso --git --git-ignore"
+abbr -a ls "eza --oneline --all --group-directories-first"
+abbr -a tree "eza --tree"
 
 abbr -a vi nvim
 

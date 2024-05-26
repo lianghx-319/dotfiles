@@ -16,3 +16,5 @@ proxy.fish
 noproxy.fish
 plugin-proxy.fish
 __proxy.set.fish
+__bass.py
+bass.fish

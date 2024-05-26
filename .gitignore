@@ -5,7 +5,6 @@ tmux/plugins/*
 nvim/plugin/packer_compiled.lua
 lazygit/state.yml
 fish/fish_variables
-fish/plugins/proxy.fish
 nvim/lazy-lock.json
 
 # fisher plugins
@@ -13,4 +12,7 @@ fisher.fish
 z.fish
 __z.fish
 __z*.fish
-
+proxy.fish
+noproxy.fish
+plugin-proxy.fish
+__proxy.set.fish

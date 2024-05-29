@@ -93,4 +93,27 @@ return {
       -- refer to the configuration section below
     },
   },
+
+  {
+    "folke/ts-comments.nvim",
+    opts = {},
+    event = "VeryLazy",
+    enabled = vim.fn.has "nvim-0.10.0" == 1,
+  },
+
+  {
+    "numToStr/Comment.nvim",
+    enabled = false,
+  },
+
+  {
+    "folke/todo-comments.nvim",
+    event = "VeryLazy",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+  },
 }

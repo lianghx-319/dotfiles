@@ -36,6 +36,12 @@ style = "Regular"
 x = 0
 y = 0
 
+[cursor]
+blink_interval = 500
+[cursor.style]
+blinking = "Always"
+
+
 [mouse]
 hide_when_typing = false
 

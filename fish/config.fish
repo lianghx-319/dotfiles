@@ -29,6 +29,10 @@ if command -q op
   op completion fish | source
 end
 
+# zoxide
+if command -q zoxide
+  zoxide init fish | source
+end
 
 # pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"

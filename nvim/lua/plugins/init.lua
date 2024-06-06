@@ -22,14 +22,18 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = require "configs.treesitter",
-    dependencies = { "windwp/nvim-ts-autotag" },
     build = ":TSUpdate",
   },
 
   {
-    "nvim-tree/nvim-tree.lua",
-    opts = require "configs.nvimtree",
+    event = { "BufReadPre", "BufNewFile" },
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require "configs.autotag"
+    end,
   },
+
+  { "nvim-tree/nvim-tree.lua", opts = require "configs.nvimtree" },
 
   {
     "lewis6991/gitsigns.nvim",
@@ -84,7 +88,7 @@ return {
 
   {
     "folke/trouble.nvim",
-    branch = "dev",
+    branch = "main",
     event = "LspAttach",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {

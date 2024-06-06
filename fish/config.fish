@@ -29,14 +29,14 @@ if command -q op
   op completion fish | source
 end
 
-# zoxide
-if command -q zoxide
-  zoxide init fish | source
-end
-
 # pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# zoxide
+if command -q zoxide
+  zoxide init --cmd=cd fish | source
+end

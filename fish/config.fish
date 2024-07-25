@@ -7,6 +7,8 @@ set -px --path PATH "/opt/homebrew/bin"
 set -px --path PATH "/usr/local/bin"
 set -px --path PATH "$HOME/.cargo/bin"
 
+set -x LESS "-R"
+
 fnm --version-file-strategy recursive env --shell fish --use-on-cd | source
 
 # starship

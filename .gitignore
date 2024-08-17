@@ -6,6 +6,7 @@ nvim/plugin/packer_compiled.lua
 lazygit/state.yml
 fish/fish_variables
 nvim/lazy-lock.json
+raycast/extensions
 
 # fisher plugins
 fisher.fish

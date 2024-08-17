@@ -24,3 +24,4 @@ yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Xnip" manage=off mouse_follows_focus=off
+yabai -m rule --add app="^Arc$" title="^$" mouse_follows_focus=off

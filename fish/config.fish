@@ -2,14 +2,21 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# Setup brew
+if test -d /home/linuxbrew/.linuxbrew
+  /home/linuxbrew/.linuxbrew/bin/brew shellenv | source
+else if test -d /opt/homebrew
+  /opt/homebrew/bin/brew shellenv | source
+end
+
 # Global bin PATH
-set -px --path PATH "/opt/homebrew/bin"
 set -px --path PATH "/usr/local/bin"
 set -px --path PATH "$HOME/.cargo/bin"
 
 set -x LESS "-R"
 
-fnm --version-file-strategy recursive env --shell fish --use-on-cd | source
+#fnm --version-file-strategy recursive env --shell fish --use-on-cd | source
+fnm env --use-on-cd | source
 
 # starship
 if command -q starship

@@ -1,11 +1,11 @@
 return {
-  -- {
-  --   "stevearc/conform.nvim",
-  --   event = "BufWritePre",
-  --   config = function()
-  --     require "configs.conform"
-  --   end,
-  -- },
+  {
+    "stevearc/conform.nvim",
+    event = "BufWritePre",
+    config = function()
+      require "configs.conform"
+    end,
+  },
 
   {
     "neovim/nvim-lspconfig",

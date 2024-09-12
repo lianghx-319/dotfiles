@@ -1,11 +1,11 @@
 return {
-  {
-    "stevearc/conform.nvim",
-    event = "BufWritePre",
-    config = function()
-      require "configs.conform"
-    end,
-  },
+  -- {
+  --   "stevearc/conform.nvim",
+  --   event = "BufWritePre",
+  --   config = function()
+  --     require "configs.conform"
+  --   end,
+  -- },
 
   {
     "neovim/nvim-lspconfig",
@@ -17,6 +17,9 @@ return {
   {
     "williamboman/mason.nvim",
     opts = require "configs.mason",
+    dependencies = {
+      { "zapling/mason-lock.nvim", opts = "configs.mason-lock" },
+    },
   },
 
   {

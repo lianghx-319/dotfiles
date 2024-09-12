@@ -1,5 +1,5 @@
 local options = {
-  ensure_installed = {
+  pkgs = {
     -- spell check
     "cspell",
 
@@ -23,7 +23,7 @@ local options = {
     -- rust stuff
     "rust-analyzer",
     "taplo",
-     "bash-language-server",
+    "bash-language-server",
   },
 }
 

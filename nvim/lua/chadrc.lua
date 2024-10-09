@@ -5,44 +5,34 @@
 local M = {}
 
 M.ui = {
-  theme = "everforest",
-  transparency = true,
   statusline = {
     theme = "vscode_colored",
     separator_style = "arrow",
-    overriden_modules = nil,
+    modules = nil,
   },
-  nvdash = {
-    load_on_startup = true,
+}
 
-    header = {
-      "                                                                       ",
-      "                                                                     ",
-      "       ████ ██████           █████      ██                     ",
-      "      ███████████             █████                             ",
-      "      █████████ ███████████████████ ███   ███████████   ",
-      "     █████████  ███    █████████████ █████ ██████████████   ",
-      "    █████████ ██████████ █████████ █████ █████ ████ █████   ",
-      "  ███████████ ███    ███ █████████ █████ █████ ████ █████  ",
-      " ██████  █████████████████████ ████ █████ █████ ████ ██████ ",
-      "                                                                       ",
-      "                                                                       ",
-      "                                                                       ",
-    },
+M.base46 = {
+  theme = "everforest",
+  transparency = true,
+}
 
-    buttons = {
-      { "  Find File", "Spc f f", "Telescope find_files" },
-      { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
-      { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
-      { "  Bookmarks", "Spc m a", "Telescope marks" },
-      { "  Themes", "Spc t h", "Telescope themes" },
-      { "  Mappings", "Spc c h", "NvCheatsheet" },
-    },
+M.nvdash = {
+  load_on_startup = true,
+  header = {
+    "                                                                       ",
+    "                                                                     ",
+    "       ████ ██████           █████      ██                     ",
+    "      ███████████             █████                             ",
+    "      █████████ ███████████████████ ███   ███████████   ",
+    "     █████████  ███    █████████████ █████ ██████████████   ",
+    "    █████████ ██████████ █████████ █████ █████ ████ █████   ",
+    "  ███████████ ███    ███ █████████ █████ █████ ████ █████  ",
+    " ██████  █████████████████████ ████ █████ █████ ████ ██████ ",
+    "                                                                       ",
+    "                                                                       ",
+    "                                                                       ",
   },
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
 }
 
 return M

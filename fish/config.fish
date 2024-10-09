@@ -14,9 +14,11 @@ set -px --path PATH "/usr/local/bin"
 set -px --path PATH "$HOME/.cargo/bin"
 
 set -x LESS "-R"
+set -x PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+set -x PUPPETEER_EXECUTABLE_PATH (which chromium)
 
 #fnm --version-file-strategy recursive env --shell fish --use-on-cd | source
-fnm env --use-on-cd | source
+#fnm env --use-on-cd | source
 
 # starship
 if command -q starship

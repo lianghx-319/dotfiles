@@ -18,7 +18,7 @@ return {
     "williamboman/mason.nvim",
     opts = require "configs.mason",
     dependencies = {
-      { "zapling/mason-lock.nvim", opts = "configs.mason-lock" },
+      { lazy = false, "zapling/mason-lock.nvim", opts = "configs.mason-lock" },
     },
   },
 

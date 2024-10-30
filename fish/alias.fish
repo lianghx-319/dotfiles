@@ -18,6 +18,7 @@ abbr -a vi nvim
 abbr -a lg "lazygit"
 
 # Git
+abbr -a grm "git reset origin/(git_main_branch) --hard" # reset to main branch
 abbr -a gc "git branch | grep -v (git_main_branch) | xargs git branch -D" # clear all branch except main branch
 abbr -a gaa "git add --all"
 abbr -a gcl "ghq get"

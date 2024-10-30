@@ -18,6 +18,7 @@ abbr -a vi nvim
 abbr -a lg "lazygit"
 
 # Git
+abbr -a gc "git branch | grep -v (git_main_branch) | xargs git branch -D" # clear all branch except main branch
 abbr -a gaa "git add --all"
 abbr -a gcl "ghq get"
 abbr -a gb "git switch"

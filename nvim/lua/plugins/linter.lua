@@ -7,10 +7,10 @@ return {
       events = { "BufWritePost", "BufReadPost", "InsertLeave" },
       linters_by_ft = {
         fish = { "fish" },
-        typescript = { "eslint_d" },
-        typescriptreact = { "eslint_d" },
-        javascript = { "eslint_d" },
-        javascriptreact = { "eslint_d" },
+        -- typescript = { "eslint_d" },
+        -- typescriptreact = { "eslint_d" },
+        -- javascript = { "eslint_d" },
+        -- javascriptreact = { "eslint_d" },
         -- Use the "*" filetype to run linters on all filetypes.
         -- ['*'] = { 'global linter' },
         -- Use the "_" filetype to run linters on filetypes that don't have other linters configured.

@@ -6,6 +6,9 @@ abbr -a cat "bat"
 abbr -a change "nvim ~/.config/fish/config.fish"
 abbr -a update "source ~/.config/fish/config.fish"
 
+# Weather
+abbr -a weather "curl wttr.in"
+
 # Eza
 abbr -a l "eza --icons"
 abbr -a ll "eza --all --long --header --group-directories-first --time-style long-iso --git --git-ignore"

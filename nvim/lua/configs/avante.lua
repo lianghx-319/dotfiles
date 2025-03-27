@@ -2,7 +2,8 @@ return {
   siliconflow = {
     __inherited_from = "openai",
     endpoint = "https://api.siliconflow.cn/v1",
-    model = "Qwen/Qwen2.5-32B-Instruct",
+    -- model = "Qwen/Qwen2.5-32B-Instruct",
+    model = "Qwen/Qwen2.5-72B-Instruct-128K",
     api_key_name = "SILICONFLOW_API_KEY",
   },
   ollama = {

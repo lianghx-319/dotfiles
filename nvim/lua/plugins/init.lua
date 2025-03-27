@@ -81,6 +81,11 @@ return {
   },
 
   {
+    "b0o/schemastore.nvim",
+    event = "LspAttach",
+  },
+
+  {
     "kdheepak/lazygit.nvim",
     keys = { { "<leader>gg", "<cmd>LazyGit<cr>", desc = "Open LazyGit" } },
     cmd = { "LazyGit" },

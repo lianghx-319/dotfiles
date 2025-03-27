@@ -11,11 +11,11 @@ TERM = "xterm-256color"
 size = 18.0
 
 [font.bold]
-family = "IosevkaTerm Nerd Font"
+family = "Maple Mono NF CN"
 style = "Bold"
 
 [font.bold_italic]
-family = "IosevkaTerm Nerd Font"
+family = "Maple Mono NF CN"
 style = "Bold Italic"
 
 [font.glyph_offset]
@@ -23,11 +23,11 @@ x = 0
 y = 0
 
 [font.italic]
-family = "IosevkaTerm Nerd Font"
+family = "Maple Mono NF CN"
 style = "Italic"
 
 [font.normal]
-family = "IosevkaTerm Nerd Font"
+family = "Maple Mono NF CN"
 style = "Regular"
 
 [font.offset]

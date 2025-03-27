@@ -43,7 +43,7 @@ local function custom_on_attach(client, buffer)
 end
 
 local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "ts_ls", "clangd", "tailwindcss", "jsonls", "taplo", "bashls", "ruby_lsp" }
+local servers = { "html", "cssls", "ts_ls", "clangd", "tailwindcss", "taplo", "bashls", "ruby_lsp", "rust_analyzer" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -53,6 +53,20 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+-- jsonls
+lspconfig.jsonls.setup {
+  on_attach = custom_on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+
+  settings = {
+    json = {
+      schemas = require("schemastore").json.schemas(),
+      validate = { enable = true },
+    },
+  },
+}
 
 -- lua_ls
 lspconfig.lua_ls.setup {

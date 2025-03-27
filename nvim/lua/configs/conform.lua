@@ -1,12 +1,30 @@
+local formatter = "prettier"
+
+local map = vim.keymap.set
+
+local toggle = function()
+  if formatter == "prettier" then
+    formatter = "eslint_d"
+  elseif formatter == "eslint_d" then
+    formatter = "prettier"
+  end
+end
+
+map("n", "<leader>fx", toggle, { desc = "Toggle Formatter for JS" })
+
+local format = function()
+  return { formatter }
+end
+
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
     css = { "prettier" },
     html = { "prettier" },
-    typescript = { "prettier" },
-    typescriptreact = { "prettier" },
-    javascript = { "prettier" },
-    javascriptreact = { "prettier" },
+    typescript = format,
+    typescriptreact = format,
+    javascript = format,
+    javascriptreact = format,
     sh = { "beautysh" },
     rust = { "rustfmt" },
   },

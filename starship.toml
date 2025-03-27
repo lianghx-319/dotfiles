@@ -17,7 +17,7 @@ $all\
 $cmd_duration $jobs $time\
 $line_break\
 $character"""
-command_timeout = 3600
+command_timeout = 7200
 
 [directory]
 read_only = " "

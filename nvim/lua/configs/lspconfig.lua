@@ -68,6 +68,16 @@ lspconfig.jsonls.setup {
   },
 }
 
+lspconfig.cssmodules_ls.setup {
+  on_attach = custom_on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+
+  init_options = {
+    camelCase = false,
+  },
+}
+
 -- lua_ls
 lspconfig.lua_ls.setup {
   on_attach = custom_on_attach,

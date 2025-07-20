@@ -54,3 +54,5 @@ abbr -a grb "git rebase"
 abbr -a grbi "git rebase -i"
 abbr -a grba "git rebase --abort"
 abbr -a grbc "git rebase --continue"
+
+abbr -a claude 'ANTHROPIC_BASE_URL=http://localhost:8082 ANTHROPIC_AUTH_TOKEN="some-api-key" claude'

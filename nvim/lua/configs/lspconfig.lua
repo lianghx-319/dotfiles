@@ -29,8 +29,12 @@ local function lspsaga_key_mappings(buffer)
     "<cmd>Lspsaga show_cursor_diagnostics<cr>",
     { desc = "Lspsaga show cursor diagnostics", buffer = buffer }
   )
-  map("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<cr>", { desc = "Lspsaga goto prev diagnostic", buffer = buffer })
-  map("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<cr>", { desc = "Lspsaga goto next diagnostics", buffer = buffer })
+  map("n", "[e", function()
+    require("lspsaga.diagnostic"):goto_prev { severity = vim.diagnostic.severity.ERROR }
+  end, { desc = "Lspsaga goto prev diagnostic", buffer = buffer })
+  map("n", "]e", function()
+    require("lspsaga.diagnostic"):goto_next { severity = vim.diagnostic.severity.ERROR }
+  end, { desc = "Lspsaga goto next diagnostics", buffer = buffer })
   map("n", "K", "<cmd>Lspsaga hover_doc<cr>", { desc = "Lspsaga hover doc", buffer = buffer })
   map("n", "<leader>o", "<cmd>Lspsaga outline<cr>", { desc = "Lspsaga outline", buffer = buffer })
   map("n", "<leader>ci", "<cmd>Lspsaga incoming_calls<cr>", { desc = "Lspsaga incoming calls", buffer = buffer })

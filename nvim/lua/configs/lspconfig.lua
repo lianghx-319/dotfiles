@@ -107,3 +107,41 @@ lspconfig.lua_ls.setup {
     },
   },
 }
+
+-- biome
+local function has_biome_config()
+  -- 检查 biome 配置文件
+  local biome_configs = {
+    "biome.json",
+    "biome.jsonc",
+  }
+  
+  -- 检查 package.json 中是否有 biome 配置
+  local function has_biome_in_package_json()
+    local package_json = vim.fn.getcwd() .. "/package.json"
+    if vim.fn.filereadable(package_json) == 1 then
+      local content = vim.fn.readfile(package_json)
+      local json_str = table.concat(content, "\n")
+      return json_str:match('"biome"') ~= nil
+    end
+    return false
+  end
+  
+  -- 检查配置文件是否存在
+  for _, config in ipairs(biome_configs) do
+    if vim.fn.filereadable(vim.fn.getcwd() .. "/" .. config) == 1 then
+      return true
+    end
+  end
+  
+  return has_biome_in_package_json()
+end
+
+-- 只有在检测到 biome 配置时才设置 biome LSP
+if has_biome_config() then
+  lspconfig.biome.setup {
+    on_attach = custom_on_attach,
+    on_init = on_init,
+    capabilities = capabilities,
+  }
+end

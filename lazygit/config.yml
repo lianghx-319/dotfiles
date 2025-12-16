@@ -1,6 +1,6 @@
 gui:
   theme:
-    lightTheme: false 
+    lightTheme: false
     activeBorderColor:
       - "#A7C080" # Green
       - bold
@@ -17,10 +17,10 @@ gui:
     cherryPickedCommitFgColor:
       - "#7FBBB3" # Blue
     unstagedChangesColor:
-      - "#E67E80"       # Red
+      - "#E67E80" # Red
 git:
-  paging:
-    colorArg: always
-    # pager: diff-so-fancy
-    pager: delta --dark --paging=never 
-    # --24-bit-color=never --true-color=never
+  pagers:
+    - colorArg: always
+      # pager: diff-so-fancy
+      pager: delta --dark --paging=never
+      # --24-bit-color=never --true-color=never

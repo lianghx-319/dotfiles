@@ -2,7 +2,7 @@ local map = vim.keymap.set
 
 -- Get project root directory
 local function get_project_root()
-  local current_file = vim.fn.expand("%:p")
+  local current_file = vim.fn.expand "%:p"
   local current_dir = vim.fn.fnamemodify(current_file, ":h")
 
   -- Find .git or package.json upwards
@@ -33,6 +33,18 @@ local function get_formatter_config_path()
   return vim.fn.stdpath "config" .. "/formatter-config.json"
 end
 
+-- Check if biome.json exists in project root
+local function has_biome_config()
+  local root = get_project_root()
+  local biome_config = root .. "/biome.json"
+  local file = io.open(biome_config, "r")
+  if file then
+    file:close()
+    return true
+  end
+  return false
+end
+
 -- Load formatter from config file
 local function load_formatter()
   local config_path = get_formatter_config_path()
@@ -48,6 +60,12 @@ local function load_formatter()
       end
     end
   end
+
+  -- If no config exists, check for biome.json and use biome if available
+  if has_biome_config() then
+    return "biome"
+  end
+
   return "prettier"
 end
 
@@ -84,7 +102,21 @@ end
 
 local toggle = function()
   local current_formatter = load_formatter()
-  local new_formatter = current_formatter == "prettier" and "eslint_d" or "prettier"
+  local formatters = { "prettier", "eslint_d", "biome" }
+  local current_index = 1
+
+  -- Find current formatter index
+  for i, fmt in ipairs(formatters) do
+    if fmt == current_formatter then
+      current_index = i
+      break
+    end
+  end
+
+  -- Cycle to next formatter
+  local new_index = current_index % #formatters + 1
+  local new_formatter = formatters[new_index]
+
   save_formatter(new_formatter)
   vim.notify("Formatter switched to: " .. new_formatter, vim.log.levels.INFO)
 end
@@ -98,14 +130,29 @@ end
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    css = { "prettier" },
     html = { "prettier" },
+    css = format,
     typescript = format,
     typescriptreact = format,
     javascript = format,
     javascriptreact = format,
+    json = format,
     sh = { "beautysh" },
     rust = { "rustfmt" },
+  },
+
+  formatters = {
+    biome = {
+      command = "biome",
+      args = {
+        "check",
+        "--formatter-enabled=true",
+        "--linter-enabled=true",
+        "--write",
+        "--stdin-file-path",
+        "$FILENAME",
+      },
+    },
   },
 
   format_on_save = {

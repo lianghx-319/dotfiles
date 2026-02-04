@@ -87,10 +87,11 @@ brew services start yabai
 brew services start skhd
 ```
 
-### 4.5 GPG / pass（可选）
+### 4.5 GPG / pass
 
-如需恢复 `pass`：
+详细的初始化步骤请参考：[Password Store 初始化指南](./password-store.md)
 
+简要流程：
 - 迁移你的 GPG 私钥与 `~/.password-store`
 - 公钥示例（例如你的 `~/Downloads/public.pgp`）：
 

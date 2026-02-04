@@ -11,7 +11,10 @@ end
 
 # Global bin PATH
 set -px --path PATH "/usr/local/bin"
-set -px --path PATH "$HOME/.cargo/bin"
+if not contains "$HOME/.cargo/bin" $PATH
+    # Prepending path in case a system-installed rustc needs to be overridden
+    set -px --path PATH "$HOME/.cargo/bin"
+end
 
 set -x LESS "-R"
 set -x PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
@@ -55,3 +58,6 @@ end
 if test -f ~/.config/fish.local.fish
   source ~/.config/fish.local.fish
 end
+
+# Added by coco installer
+fish_add_path /Users/bytedance/.local/bin

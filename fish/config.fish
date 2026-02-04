@@ -52,6 +52,6 @@ if command -q zoxide
   zoxide init --cmd=cd fish | source
 end
 
-set -gx ARK_API_KEY "285a9e2d-82d6-4e0e-8519-5551d3f8fe39"
-
-set -gx SILICONFLOW_API_KEY (pass show siliconflow/api-key)
+if test -f ~/.config/fish.local.fish
+  source ~/.config/fish.local.fish
+end

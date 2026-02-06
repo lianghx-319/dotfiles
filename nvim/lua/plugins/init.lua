@@ -128,4 +128,16 @@ return {
       -- refer to the configuration section below
     },
   },
+
+  {
+    "OXY2DEV/markview.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = {
+      icon_provider = "devicons",
+    },
+  },
 }

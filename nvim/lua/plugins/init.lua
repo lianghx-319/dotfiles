@@ -142,7 +142,7 @@ return {
   },
 
   {
-    "Dwarrior/codediff.nvim",
+    "esmuellert/codediff.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
     },

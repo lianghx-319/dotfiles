@@ -145,10 +145,9 @@ return {
     "esmuellert/codediff.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
     },
     cmd = { "CodeDiff" },
-    config = function()
-      require("codediff").setup()
-    end,
+    opts = {},
   },
 }

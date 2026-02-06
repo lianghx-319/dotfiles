@@ -140,4 +140,15 @@ return {
       icon_provider = "devicons",
     },
   },
+
+  {
+    "Dwarrior/codediff.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    cmd = { "CodeDiff" },
+    config = function()
+      require("codediff").setup()
+    end,
+  },
 }

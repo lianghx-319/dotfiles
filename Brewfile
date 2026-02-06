@@ -18,6 +18,7 @@ brew "gawk"
 brew "gh"
 brew "ghq"
 brew "git-delta"
+brew "glow"
 brew "gnu-sed"
 brew "gnupg"
 brew "jq"
@@ -60,3 +61,4 @@ cask "trae-cn"
 cask "visual-studio-code"
 cask "wechat"
 mas "RunCat", id: 1429033973
+mas "Xnip", id: 1221250572

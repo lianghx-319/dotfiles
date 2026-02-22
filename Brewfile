@@ -4,6 +4,7 @@ tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "microsoft/git"
 tap "morantron/tmux-fingers"
+tap "oven-sh/bun"
 brew "bat"
 brew "cfonts"
 brew "cloc"
@@ -41,6 +42,7 @@ brew "gohyuhan/gitti/gitti"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 brew "morantron/tmux-fingers/tmux-fingers"
+brew "oven-sh/bun/bun"
 cask "1password"
 cask "1password-cli"
 cask "aldente"
@@ -61,5 +63,9 @@ cask "telegram"
 cask "trae-cn"
 cask "visual-studio-code"
 cask "wechat"
+mas "1Password for Safari", id: 1569813296
+mas "Infuse", id: 1136220934
 mas "RunCat", id: 1429033973
+mas "Shadowrocket", id: 932747118
+mas "Swing", id: 989461317
 mas "Xnip", id: 1221250572

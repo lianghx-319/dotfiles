@@ -20,6 +20,11 @@ set -x LESS "-R"
 set -x PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 set -x PUPPETEER_EXECUTABLE_PATH (which chromium)
 
+if not contains "$HOME/.bun/bin" $PATH
+    # Prepending path in case a system-installed rustc needs to be overridden
+    set -px --path PATH "$HOME/.bun/bin"
+end
+
 #fnm --version-file-strategy recursive env --shell fish --use-on-cd | source
 #fnm env --use-on-cd | source
 
@@ -61,3 +66,8 @@ end
 
 # Added by coco installer
 fish_add_path /Users/bytedance/.local/bin
+
+# OpenClaw Completion
+if test -f ~/.openclaw/completions/openclaw.fish
+  source ~/.openclaw/completions/openclaw.fish
+end

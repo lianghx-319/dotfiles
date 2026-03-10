@@ -49,3 +49,6 @@ done
 
 symbol_link_config "lazygit/config.yml" "$HOME/Library/Application Support/lazygit/config.yml"
 symbol_link_config "ghostty/config" "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
+
+# GnuPG 默认使用 ~/.gnupg（非 XDG），只链接配置文件避免影响密钥目录
+symbol_link_config "gnupg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"

@@ -8,7 +8,7 @@
 
 - `gnupg`: GPG 密钥管理
 - `pass`: 密码管理器本体
-- `pinentry-mac`: (可选) macOS 下的 GPG 密码输入弹窗
+- `pinentry-mac`: (推荐) macOS 下的 GPG 密码输入弹窗（避免在无 TTY 场景解密失败）
 
 ## 2. 导入 GPG 密钥
 
@@ -70,8 +70,8 @@ mkdir ~/.password-store
 ```text
 max-cache-ttl 34560000
 default-cache-ttl 34560000
-# macOS 建议添加
-pinentry-program /usr/local/bin/pinentry-mac
+# macOS 建议添加（Apple Silicon 通常为 /opt/homebrew；Intel 通常为 /usr/local）
+pinentry-program /opt/homebrew/bin/pinentry-mac
 ```
 
 修改配置后重启 agent：

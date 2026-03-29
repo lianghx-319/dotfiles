@@ -99,10 +99,15 @@ brew services start skhd
 gpg --import ~/Downloads/public.pgp
 ```
 
+### 4.6 GitHub HTTPS 鉴权（GCM + pass）
+
+如果你的 GitHub remote 形如 `https://github.com/...`（而非 SSH），推荐用 Git Credential Manager（GCM）做登录，并把 token 加密存储到 `pass`。
+
+一键修复/启用脚本见：`docs/password-store.md` 的「6.1 一键修复/启用（可独立运行）」。
+
 ## 5. 常见验证点
 
 - `~/.config/fish`、`~/.config/tmux`、`~/.config/nvim` 等应为 symlink
 - `brew bundle check` 通过
 - `fish` / `tmux` / `nvim` 能正常启动
 - 授权后，`skhd` 的快捷键能驱动 `yabai` 生效
-

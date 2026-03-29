@@ -89,3 +89,93 @@ pass <some/password/path>
 ```
 
 如果能正常解密并显示，说明初始化成功。
+
+## 6. GitHub 鉴权（Git Credential Manager + pass）
+
+如果你使用 HTTPS remote（如 `https://github.com/...`），推荐用 Git Credential Manager（GCM）做 OAuth/PAT 登录，并把 token 加密落盘到 `pass`（`~/.password-store`）。
+
+### 6.1 一键修复/启用（可独立运行）
+
+适用场景：机器已经装好大部分环境，但 `git push` 反复提示登录、或 GCM 报错无法读写 `pass`。
+
+```bash
+set -euo pipefail
+
+# 1) pinentry（解决“无 TTY 场景”下 gpg 解密/加密失败）
+if command -v brew >/dev/null 2>&1; then
+  brew list --formula pinentry-mac >/dev/null 2>&1 || brew install pinentry-mac
+fi
+
+PINENTRY_BIN="$(command -v pinentry-mac || true)"
+if [ -z "$PINENTRY_BIN" ]; then
+  echo "pinentry-mac not found; please install it first" >&2
+  exit 1
+fi
+
+mkdir -p "$HOME/.gnupg"
+chmod 700 "$HOME/.gnupg"
+
+GPG_AGENT_CONF="$HOME/.gnupg/gpg-agent.conf"
+if [ ! -f "$GPG_AGENT_CONF" ]; then
+  cat >"$GPG_AGENT_CONF" <<EOF
+max-cache-ttl 34560000
+default-cache-ttl 34560000
+
+# macOS：使用 GUI pinentry，避免在无 TTY 场景（IDE/GUI Git）解密失败
+pinentry-program $PINENTRY_BIN
+EOF
+else
+  # 不覆盖已有配置，仅保证 pinentry-program 存在
+  if ! grep -q '^pinentry-program ' "$GPG_AGENT_CONF"; then
+    printf '\n# macOS：使用 GUI pinentry，避免在无 TTY 场景（IDE/GUI Git）解密失败\n' >>"$GPG_AGENT_CONF"
+    printf 'pinentry-program %s\n' "$PINENTRY_BIN" >>"$GPG_AGENT_CONF"
+  fi
+fi
+chmod 600 "$GPG_AGENT_CONF"
+
+gpgconf --kill gpg-agent >/dev/null 2>&1 || true
+gpgconf --launch gpg-agent >/dev/null 2>&1 || true
+
+# 2) 信任 pass 的收件人 key（解决：There is no assurance this key belongs... / Unusable public key）
+if [ -f "$HOME/.password-store/.gpg-id" ]; then
+  PASS_FPR="$(head -n1 "$HOME/.password-store/.gpg-id" | tr -d ' \t\r')"
+  if [ -n "$PASS_FPR" ]; then
+    echo "$PASS_FPR:6:" | gpg --import-ownertrust >/dev/null
+  fi
+fi
+
+# 3) 配置 GitHub 使用 GCM，并让 GCM 使用 gpg 存储（pass backend）
+GCM_BIN="$(command -v git-credential-manager || true)"
+if [ -z "$GCM_BIN" ]; then
+  echo "git-credential-manager not found; please install it first" >&2
+  exit 1
+fi
+
+git config --global includeIf.gitdir:~/code/github.com/.path "$HOME/.github.gitconfig"
+
+if [ ! -f "$HOME/.github.gitconfig" ]; then
+  cat >"$HOME/.github.gitconfig" <<EOF
+# GitHub 专用配置（被 ~/.gitconfig 的 includeIf 引入）
+
+[credential]
+    useHttpPath = true
+    credentialStore = gpg
+
+[credential "https://github.com"]
+    # 禁用系统 keychain，避免残留旧凭据导致反复提示登录
+    helper =
+    helper = $GCM_BIN
+EOF
+fi
+
+# 4) 验证（不应提示输入用户名/密码）
+git-credential-manager github list >/dev/null
+echo "GCM + pass for GitHub: OK"
+```
+
+### 6.2 常见报错速查
+
+- `gpg: public key decryption failed: Inappropriate ioctl for device`
+  - 多见于没有配置 `pinentry-mac`（IDE/GUI Git 没有 TTY），按上面的 6.1 修复。
+- `There is no assurance this key belongs to the named user` / `Unusable public key`
+  - key 未设置信任（`[ unknown]`），需要设置 ownertrust（6.1 已包含）。

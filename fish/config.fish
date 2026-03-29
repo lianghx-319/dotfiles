@@ -67,6 +67,9 @@ end
 # Added by coco installer
 fish_add_path /Users/bytedance/.local/bin
 
+# ghq
+set -gx GHQ_ROOT ~/Code
+
 # OpenClaw Completion
 if test -f ~/.openclaw/completions/openclaw.fish
   source ~/.openclaw/completions/openclaw.fish

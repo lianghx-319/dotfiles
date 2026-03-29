@@ -179,3 +179,6 @@ echo "GCM + pass for GitHub: OK"
   - 多见于没有配置 `pinentry-mac`（IDE/GUI Git 没有 TTY），按上面的 6.1 修复。
 - `There is no assurance this key belongs to the named user` / `Unusable public key`
   - key 未设置信任（`[ unknown]`），需要设置 ownertrust（6.1 已包含）。
+- `git push` 反复弹 "GitHub select account" OAuth 授权窗口
+  - 原因：macOS Keychain 里缓存了过期的 GitHub OAuth token（来自旧 `gh` 或其他工具），GCM 优先读取了 Keychain 而非 pass 中的 PAT，导致认证失败后 fallback 到 OAuth 流程。
+  - 解决：清除 Keychain 中的 GitHub 相关凭据，或卸载 `gh`（`brew uninstall gh`），然后重新执行 `git-credential-manager github login` 刷新 token。
